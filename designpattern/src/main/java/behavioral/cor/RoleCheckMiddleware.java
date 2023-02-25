@@ -1,4 +1,4 @@
-package cor;
+package behavioral.cor;
 
 public class RoleCheckMiddleware extends Middleware {
 

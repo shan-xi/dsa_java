@@ -1,4 +1,4 @@
-package cor;
+package behavioral.cor;
 
 public class ThrottlingMiddleware extends Middleware {
     private int requestPerMinute;

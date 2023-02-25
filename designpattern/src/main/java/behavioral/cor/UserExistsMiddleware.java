@@ -1,4 +1,4 @@
-package cor;
+package behavioral.cor;
 
 public class UserExistsMiddleware extends Middleware {
     private Server server;

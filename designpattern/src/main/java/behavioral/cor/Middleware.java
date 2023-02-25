@@ -1,4 +1,4 @@
-package cor;
+package behavioral.cor;
 
 public abstract class Middleware {
     private Middleware next;

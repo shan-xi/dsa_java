@@ -1,4 +1,4 @@
-package cor;
+package behavioral.cor;
 
 import java.util.HashMap;
 import java.util.Map;
