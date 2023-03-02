@@ -1,5 +1,8 @@
 package unique_binary_search_trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     public int numTrees(int n) {
         /**
@@ -30,5 +33,68 @@ public class Solution {
             arr[i] = temp;
         }
         return arr[n];
+    }
+
+    public List<TreeNode> generateTrees(int n) {
+        return helper(1, n);
+    }
+
+    List<TreeNode> helper(int start, int end) {
+        List<TreeNode> list = new ArrayList<>();
+        if (start > end) {
+            list.add(null);
+            return list;
+        }
+
+        for (int root = start; root <= end; root++) {
+            List<TreeNode> leftTrees = helper(start, root - 1);
+            List<TreeNode> rightTrees = helper(root + 1, end);
+            for (TreeNode left : leftTrees) {
+                for (TreeNode right : rightTrees) {
+                    TreeNode node = new TreeNode(root, left, right);
+                    list.add(node);
+                }
+            }
+        }
+        return list;
+    }
+
+    public void printByPreorder(List<TreeNode> nodeList) {
+        for (TreeNode root : nodeList) {
+            preorder(root);
+            System.out.println();
+        }
+    }
+
+    private void preorder(TreeNode root) {
+        if (root != null) {
+            System.out.print(root.val);
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return "root=" + this.val + ", left=" + this.left + ", right=" + this.right;
     }
 }

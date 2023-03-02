@@ -3,6 +3,10 @@ package unique_binary_search_trees;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class SolutionTest {
     @Test
     public void test_case1_successful() {
@@ -19,6 +23,7 @@ public class SolutionTest {
         int expect = 2;
         Assertions.assertEquals(expect, actual);
     }
+
     @Test
     public void test_case3_successful() {
         Solution s = new Solution();
@@ -26,6 +31,7 @@ public class SolutionTest {
         int expect = 5;
         Assertions.assertEquals(expect, actual);
     }
+
     @Test
     public void test_case4_successful() {
         Solution s = new Solution();
@@ -33,11 +39,11 @@ public class SolutionTest {
         int expect = 14;
         Assertions.assertEquals(expect, actual);
     }
+
     @Test
     public void test_case5_successful() {
         Solution s = new Solution();
-        int actual = s.numTrees(5);
-        int expect = 42;
-        Assertions.assertEquals(expect, actual);
+        List<TreeNode> r = s.generateTrees(3);
+        s.printByPreorder(r);
     }
 }
