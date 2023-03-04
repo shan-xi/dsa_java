@@ -2,12 +2,11 @@ package merge_intervals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Solution {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (arg1, arg2) -> Integer.compare(arg1[0], arg2[0]));
-        List<int[]> list = new ArrayList<>();
+        ArrayList<int[]> list = new ArrayList<>();
         int record_start = intervals[0][0];
         int record_end = intervals[0][1];
         if (intervals.length == 1) {
@@ -34,4 +33,19 @@ public class Solution {
         }
         return list.toArray(new int[list.size()][]);
     }
+
+// LeetCode solution memory usage is worse than my code, runtime the same
+
+//    public int[][] merge(int[][] intervals) {
+//        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+//        LinkedList<int[]> merged = new LinkedList<>();
+//        for (int[] interval : intervals) {
+//            if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
+//                merged.add(interval);
+//            } else {
+//                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+//            }
+//        }
+//        return merged.toArray(new int[merged.size()][]);
+//    }
 }
