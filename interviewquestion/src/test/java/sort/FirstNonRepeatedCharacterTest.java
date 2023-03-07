@@ -2,6 +2,7 @@ package sort;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import repeated.FirstNonRepeatedCharacter;
 
 public class FirstNonRepeatedCharacterTest {
     @Test
