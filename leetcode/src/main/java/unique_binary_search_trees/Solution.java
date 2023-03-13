@@ -19,20 +19,18 @@ public class Solution {
         if (n == 2) {
             return 2;
         }
-
-        int[] arr = new int[n + 1];
-        arr[0] = 1;
-        arr[1] = 1;
-        arr[2] = 2;
-
+        int[] f = new int[n + 1];
+        f[0] = 1;
+        f[1] = 1;
+        f[2] = 2;
         for (int i = 3; i <= n; i++) {
-            int temp = 0;
+            int sum = 0;
             for (int j = 0; j < i; j++) {
-                temp += arr[j] * arr[i - j - 1];
+                sum += f[j] * f[i - j - 1];
             }
-            arr[i] = temp;
+            f[i] = sum;
         }
-        return arr[n];
+        return f[n];
     }
 
     public List<TreeNode> generateTrees(int n) {
