@@ -13,13 +13,15 @@ public class Solution {
         int k = 0;
         while (i < nums1.length && j < nums2.length) {
             if (nums1[i] == nums2[j]) {
-                nums1[k++] = nums1[i++];
+                nums1[k] = nums1[i];
+                i++;
                 j++;
+                k++;
             } else {
-                if (nums1[i] < nums2[j]) {
-                    i++;
-                } else {
+                if (nums1[i] > nums2[j]) {
                     j++;
+                } else {
+                    i++;
                 }
             }
         }
