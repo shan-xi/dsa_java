@@ -27,7 +27,6 @@ public class Solution {
 
     private void dfs(int[][] grid1, int[][] grid2, int rows, int cols, int i, int j, Validation valid) {
         if (grid1[i][j] != grid2[i][j]) {
-            grid2[i][j] = 0;
             valid.isValid = false;
         }
         grid2[i][j] = 0;
