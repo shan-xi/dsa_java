@@ -7,8 +7,18 @@ public class SolutionTest {
     @Test
     public void test_case1_success() {
         Solution s = new Solution();
-        int[][] grid1 = {{1, 1, 1, 0, 0}, {0, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 1, 1}};
-        int[][] grid2 = {{1, 1, 1, 0, 0}, {0, 0, 1, 1, 1}, {0, 1, 0, 0, 0}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}};
+        int[][] grid1 = {
+                {1, 1, 1, 0, 0},
+                {0, 1, 1, 1, 1},
+                {0, 0, 0, 0, 0},
+                {1, 0, 0, 0, 0},
+                {1, 1, 0, 1, 1}};
+        int[][] grid2 = {
+                {1, 1, 1, 0, 0},
+                {0, 0, 1, 1, 1},
+                {0, 1, 0, 0, 0},
+                {1, 0, 1, 1, 0},
+                {0, 1, 0, 1, 0}};
         int a = s.countSubIslands(grid1, grid2);
         int e = 3;
         Assertions.assertEquals(e, a);
