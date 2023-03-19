@@ -12,7 +12,6 @@ public class Solution {
             prev = curr;
             curr = tempNode;
         }
-
         return prev;
     }
 }
