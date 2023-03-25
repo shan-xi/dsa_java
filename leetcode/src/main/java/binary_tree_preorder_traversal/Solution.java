@@ -8,23 +8,17 @@ import java.util.Stack;
 
 // 144. Binary Tree Preorder Traversal
 public class Solution {
+    List<Integer> result = new ArrayList<>();
+
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            result.add(node.val);
-            if (node.right != null) {
-                stack.push(node.right);
-            }
-            if (node.left != null) {
-                stack.push(node.left);
-            }
-        }
+        preOrder(root);
         return result;
+    }
+
+    private void preOrder(TreeNode root) {
+        if (root == null) return;
+        result.add(root.val);
+        preOrder(root.left);
+        preOrder(root.right);
     }
 }
