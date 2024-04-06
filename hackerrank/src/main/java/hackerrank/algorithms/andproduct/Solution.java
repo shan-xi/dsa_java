@@ -2,6 +2,9 @@ package hackerrank.algorithms.andproduct;
 
 import java.io.IOException;
 
+/**
+ * https://www.hackerrank.com/challenges/and-product/problem
+ */
 class Result {
 
     /*

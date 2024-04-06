@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * https://www.hackerrank.com/challenges/almost-sorted/problem
+ */
 class Result {
 
     /*

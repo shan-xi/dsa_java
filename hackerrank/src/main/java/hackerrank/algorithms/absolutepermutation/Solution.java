@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://www.hackerrank.com/challenges/absolute-permutation/problem
+ */
 class Result {
 
     /*
@@ -48,7 +51,7 @@ class Result {
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        List<Integer> result = Result.absolutePermutation(3, 0);
+        List<Integer> result = Result.absolutePermutation(2, 1);
         System.out.println(result);
 //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 //        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));

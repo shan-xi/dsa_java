@@ -2,6 +2,9 @@ package hackerrank.algorithms.biggerisgreatter;
 
 import java.io.IOException;
 
+/**
+ * https://www.hackerrank.com/challenges/bigger-is-greater/problem
+ */
 class Result {
 
     /*
