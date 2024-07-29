@@ -1,5 +1,7 @@
 package topic.priority_queue._264_Ugly_Number_II;
 
+// Dynamic programming
+
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
