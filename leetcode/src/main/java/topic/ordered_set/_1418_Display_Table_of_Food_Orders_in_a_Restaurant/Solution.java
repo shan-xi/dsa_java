@@ -1,4 +1,4 @@
-package topic._1418_Display_Table_of_Food_Orders_in_a_Restaurant;
+package topic.ordered_set._1418_Display_Table_of_Food_Orders_in_a_Restaurant;
 
 import java.util.*;
 
