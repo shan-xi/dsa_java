@@ -1,4 +1,4 @@
-package topic.two_pointers._80_Remove_Duplicates_from_Sorted_Array_II;
+package topic.array_and_string._80_Remove_Duplicates_from_Sorted_Array_II;
 
 public class Solution {
     public static void main(String[] args) {
