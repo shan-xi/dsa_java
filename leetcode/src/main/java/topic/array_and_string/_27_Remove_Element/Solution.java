@@ -1,4 +1,4 @@
-package topic.array_and_string._12_Integer_to_Roman._27_Remove_Element;
+package topic.array_and_string._27_Remove_Element;
 
 import java.util.Arrays;
 
